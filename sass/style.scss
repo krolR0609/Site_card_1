@@ -1,0 +1,139 @@
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+
+ @import "compass/reset";
+ @import "../css/bootstrap.min.css";
+ @import "../css/font-awesome.css";
+ $Font_family: 'PT Sans', sans-serif;
+ $Color_black: #000000;
+ $a_hover: #efefef;
+ $red: #ec4444;
+ $red_hover: #cf3535;
+ body{
+ 	font-family: $Font-family;
+ 	height: 100%;
+ }
+ html{
+    height: 100%; //позволит растянуть сайт на 100% высоты
+}
+a:hover{
+	text-decoration: none;
+}
+.wrapper{
+ 	min-height: 100%; //выставляем минимальную высоту в 100%
+ 	font-family: $Font-family;
+ 	background: #a0a0a0 url("../img/Background.png") no-repeat center center fixed;
+ 	-webkit-background-size: cover;
+ 	-moz-background-size: cover;
+ 	-o-background-size: cover;
+ 	background-size: cover;
+ 	text-align: center;
+ 	img{
+ 		margin: 100px auto;
+ 	}
+ 	h1{
+ 		font-weight: bold;
+ 		font-size: 60px;
+ 		color: $Color_black;
+ 		margin-bottom: 110px;
+ 		a{
+ 			position: relative;
+ 			z-index: 2;
+ 			color: $Color_black;
+ 		}
+ 		a:after{
+ 			position: absolute;
+ 			content: "";
+ 			z-index:1;
+ 			width: 100%;
+ 			height: 6px;
+ 			background: $red;
+ 			left: 0;
+ 			bottom: -3px;
+ 		}
+ 		a:hover{
+ 			color: $red;
+ 			cursor: pointer;
+ 		}
+ 	}
+ 	form{
+ 		display:block;
+ 		margin-bottom: 130px;
+ 		p{
+ 			color: white;
+ 			padding:0;
+ 		}
+ 		p:first-child{
+ 			font-size: 16px;
+ 			text-align: left;
+ 			margin-bottom: 8px;
+ 		}
+ 		p:last-child{
+ 			font-size: 12px;
+ 			text-align: right;
+ 			margin-top: 8px;
+ 		}
+ 		.inp{
+ 			position: relative;
+ 			font-size: 20px;
+ 			color: #a2a2a2;
+ 			border-style: solid;
+ 			border-width: 1px;
+ 			border-color: rgba(255, 255, 255, 0.5);
+ 			background-color: rgba(0, 0, 0, 0.4);
+ 		}
+ 		input[type='email']{
+ 			border-style: solid;
+ 			border-width: 1px;
+ 			border-color: rgba(0 , 0 , 0, 0.0);
+ 			background-color: rgba(0, 0, 0, 0.0);
+ 			font-size: 20px;
+ 			color: #a2a2a2;
+ 			padding: 20px 15px;
+ 		}
+ 		input[type='email']:focus{
+ 			border: none; /* Убираем рамку */
+ 			outline: none; /* Убираем свечение в Chrome и Safari */
+ 			-webkit-appearance: none; /* Убираем рамку в Chrome и Safari */
+ 		}
+ 		.button{
+ 			cursor: pointer;
+ 			width: 50px;
+ 			height: 50px; 
+ 			background: $red;
+ 			border-radius: 360px;
+ 			margin-top: 10px;
+ 			float: right;
+ 			color: white;	
+ 			line-height: 50px;
+ 		}
+ 		.button:hover{
+ 			background: $red_hover;
+ 		}
+ 		a{
+ 			color: white;
+ 		}
+ 		.button:after{
+ 			content: '';
+ 			clear: both;
+ 		}
+ 	}
+ 	.twitter{
+ 		margin-bottom: 304px;
+ 		color: white;
+ 		a{
+ 			color:white;
+ 			font-size: 16px;
+ 		}
+ 		a:hover{
+ 			text-decoration: none;
+ 			color: $a_hover;
+ 		}
+ 		i{
+ 			margin-right: 10px;
+ 		}
+ 	}
+ }
+
